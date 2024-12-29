@@ -1,0 +1,42 @@
+❤️ 1. count set bits:
+		while n > 0:
+			ct += 1
+			n = n&(n-1) //reduces one left most 1 in binary
+❤️ 2. There are X teams... In first round X/2 matches.. The lost X/2 teams will eliminated... next round x/4 matches held from x/2 teams.. x/4 eliminates.. etc etc
+	No o f rounds held = Log(X)
+❤️ 3. PRIME NUMBER
+	sqrt(n) cuz... 100 1x100, 2x50, 4x25, 5x20, 10x10 now everything repeates 20x5, 25x4,50x2,100x1... so we just need to check until sqrt(n)	
+
+		
+	public boolean f(int n) {
+    if (n <= 1) return false; // 1 is not prime
+    if (n <= 3) return true; // 2 and 3 are prime
+    if (n % 2 == 0 || n % 3 == 0) return false; // multiples of 2 and 3 are not prime
+    for (int i = 5; i * i <= n; i += 6) {
+        if (n % i == 0 || n % (i + 2) == 0) return false;
+    }
+    return true;
+	}
+❤️ 4. SUM OF DIGITS of number until get single digit
+	if n==0 : return 0
+	elif n%9==0: return 9
+	else: return n%9
+❤️ 5. NO OF TRAILING ZEROES IN A FACTORIAL OF N
+	first check how many 5's are there from 1 to n
+	check how many 2nd 5's and 3rd 5's etc etc etc
+	res = 0
+	while n>=5:
+		n//=5
+		res += n
+	print(res)
+❤️ 6. u have 1 to n numbers and u can take any two numbers so that the gcd is max
+	ans = n//2 (floor values)
+
+❤️ 7.  while True:
+    		try:
+        		x, y, z = map(int, input().split())
+   		 except:
+       			 break
+    		finally:
+        		print(max(x*y-z, 0))
+	from this i gotto know that even i write break in except block, the finally block still executes which results the value error saying x not defined
