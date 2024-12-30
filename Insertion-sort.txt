@@ -1,0 +1,28 @@
+INSERTION SORT
+Insertion sort is a simple sorting algorithm that works by iteratively inserting each element of an unsorted list into its correct position in a sorted portion of the list. 
+It is like sorting playing cards in your hands. You split the cards into two groups: the sorted cards and the unsorted cards. 
+Then, you pick a card from the unsorted group and put it in the right place in the sorted group.
+
+It's like....
+You will sort arr[:1]
+then arr[:2]
+then arr[:3]
+then arr[:4}
+.
+.
+.
+.
+then arr[:n]
+
+def insertion_sort(arr, n):
+  for i in range(1, n):
+    j = i - 1
+    k = arr[i]
+    while j >= 0 and k < arr[j]:
+      arr[j+1] = arr[j]
+      j -= 1
+    arr[j+1] = k
+
+
+      
+      
